@@ -30,3 +30,22 @@ Continuation of article after product list.
 Ensure product handles used within [PROD] are valid and exist in your store to avoid errors in rendering the template.
 Customize styles and add functionalities, such as responsive behavior and accessibility improvements, as required for your store's design.
 Ready to boost your article engagement with embedded product features? Implement this template and transform your blog into an interactive shopping platform!
+
+# Only for dawn theme user
+
+We need to add below files at the top of the main-article.liquid to correctly work product card.
+
+{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- unless section.settings.quick_add == 'none' -%}
+  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endunless -%}
+
+{%- if section.settings.quick_add == 'standard' -%}
+  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
