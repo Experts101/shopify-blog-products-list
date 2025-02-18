@@ -30,6 +30,3 @@ Continuation of article after product list.
 Ensure product handles used within [PROD] are valid and exist in your store to avoid errors in rendering the template.
 Customize styles and add functionalities, such as responsive behavior and accessibility improvements, as required for your store's design.
 Ready to boost your article engagement with embedded product features? Implement this template and transform your blog into an interactive shopping platform!
-
-# Feel free to adjust the guide based on your specific setup or preferences.
-
