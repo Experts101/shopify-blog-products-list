@@ -49,3 +49,10 @@ We need to add below files at the top of the main-article.liquid to correctly wo
 {%- if section.settings.quick_add == 'standard' -%}
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
+
+{%- if section.settings.quick_add == 'bulk' -%}
+  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
